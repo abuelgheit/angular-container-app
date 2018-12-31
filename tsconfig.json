@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "tortoga": [
+        "dist/tortoga"
+      ],
+      "tortoga/*": [
+        "dist/tortoga/*"
+      ]
+    }
   }
 }

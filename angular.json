@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "tortoga": {
+      "root": "projects/tortoga",
+      "sourceRoot": "projects/tortoga/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tortoga/tsconfig.lib.json",
+            "project": "projects/tortoga/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tortoga/src/test.ts",
+            "tsConfig": "projects/tortoga/tsconfig.spec.json",
+            "karmaConfig": "projects/tortoga/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tortoga/tsconfig.lib.json",
+              "projects/tortoga/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "container-app"
